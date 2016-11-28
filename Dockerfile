@@ -63,9 +63,7 @@ RUN git clone https://github.com/BenLangmead/bowtie2.git &&\
  cp bowtie2-inspect-l /usr/bin
 
 RUN git clone https://github.com/Yavin4/PinAPLPy.git &&\
-	wget http://portals.broadinstitute.org/gpp/public/dir/download?dirpath=software&filename=STARS_v1.2.zip &&\
-	unzip STARS_v1.2.zip
-
+	
 WORKDIR /opt
 
 RUN groupadd -r -g 1000 ubuntu &&\
