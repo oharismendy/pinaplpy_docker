@@ -62,7 +62,7 @@ RUN git clone https://github.com/BenLangmead/bowtie2.git &&\
  cp bowtie2-inspect-s /usr/bin &&\
  cp bowtie2-inspect-l /usr/bin
 
-RUN git clone https://github.com/Yavin4/PinAPLPy.git &&\
+RUN git clone https://github.com/Yavin4/PinAPLPy.git 
 	
 WORKDIR /opt
 
