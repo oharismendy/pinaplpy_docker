@@ -64,16 +64,4 @@ RUN git clone https://github.com/BenLangmead/bowtie2.git &&\
 
 RUN git clone https://github.com/Yavin4/PinAPLPy.git 
 	
-WORKDIR /opt
-
-RUN groupadd -r ubuntu -g 433 &&\
-    useradd -r -g ubuntu -u 431 -d /home/ubuntu ubuntu &&\
-    echo "ubuntu ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers &&\
-    chown -R ubuntu:ubuntu /home/ubuntu &&\
-    cp /opt/PinAPLPy/configuration.yaml /home/ubuntu &&\
-    cp -R /opt/PinAPLPy/Data /home/ubuntu/Data &&\
-    cp -R /opt/PinAPLPy/Library /home/ubuntu/Library
-    
-       
-USER ubuntu
-WORKDIR /home/ubuntu
+WORKDIR /scratch
