@@ -64,9 +64,8 @@ RUN git clone https://github.com/BenLangmead/bowtie2.git &&\
 
 RUN git clone https://github.com/Yavin4/PinAPLPy.git &&\
 	mkdir -p /scratch &&\
-	cp -R /opt/PinAPLPy/Library /scratch &&\
-	cp /opt/PinAPLPy/configuration.yaml /scratch  
-
+	chmod -R 755 /opt/PinAPLPy
+	
 ENV PATH="/opt/PinAPLPy/:${PATH}" 
 	
 WORKDIR /scratch
