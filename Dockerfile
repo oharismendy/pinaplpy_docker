@@ -13,6 +13,7 @@ build-essential \
 curl \
 git \
 g++ \
+gzip \
 libncurses5-dev \
 libssl-dev \
 libboost-all-dev \
@@ -36,8 +37,7 @@ zlib1g \
 zlib1g-dev \
 gedit \
 gpicview \
-r-base \
-gunzip
+r-base 
 
 RUN R -e "install.packages(c('heatmap.2','gplots'), repos = 'http://cran.rstudio.com/')" 
 
