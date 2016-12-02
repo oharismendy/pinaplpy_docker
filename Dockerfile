@@ -18,6 +18,7 @@ libncurses5-dev \
 libssl-dev \
 libboost-all-dev \
 libbz2-dev \
+libfreetype6-dev \
 make \
 man \
 pkg-config \
