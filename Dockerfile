@@ -46,9 +46,9 @@ RUN pip install --upgrade pip &&\
     statsmodels \
     pandas \
     matplotlib \
-    cutadapt \
     joblib \
-    multiprocessing 
+    multiprocessing && \ 
+    pip install --user --upgrade cutadapt
 
 RUN git clone https://github.com/BenLangmead/bowtie2.git &&\
  cd bowtie2 &&\
