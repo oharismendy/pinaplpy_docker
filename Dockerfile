@@ -68,6 +68,6 @@ RUN git clone https://github.com/Yavin4/PinAPLPy.git &&\
 	mkdir -p /scratch &&\
 	chmod -R 755 /opt/PinAPLPy
 	
-ENV PATH="/opt/PinAPLPy/:${PATH}" 
+ENV PATH="/opt/PinAPLPy:/root/.local/bin/:${PATH}" 
 	
 WORKDIR /scratch
