@@ -65,9 +65,10 @@ RUN git clone https://github.com/BenLangmead/bowtie2.git &&\
  cp bowtie2-inspect-l /usr/bin
 
 RUN git clone https://github.com/Yavin4/PinAPLPy.git &&\
+	mkdir -p /workingdir &&\
 	mkdir -p /scratch &&\
 	chmod -R 755 /opt/PinAPLPy
 	
 ENV PATH="/opt/PinAPLPy:/root/.local/bin/:${PATH}" 
 	
-WORKDIR /scratch
+WORKDIR /workingdir
