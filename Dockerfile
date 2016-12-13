@@ -46,15 +46,11 @@ RUN pip install --upgrade pip &&\
     pip install scipy \
     statsmodels \
     pandas \
+    maptolib \
     joblib \
     multiprocessing && \ 
     pip install --user --upgrade cutadapt
     
-RUN wget https://pypi.python.org/packages/8f/f4/c0c7e81f64d5f4d36e52e393af687f28882c53dcd924419d684dc9859f40/matplotlib-1.5.1.tar.gz &&\
-	tar -xzvf matplotlib-1.5.1.tar.gz &&\
-	cd maptolib-1.5.1 &&\
-	python setup.py install
-
 RUN git clone https://github.com/BenLangmead/bowtie2.git &&\
  cd bowtie2 &&\
  make &&\
