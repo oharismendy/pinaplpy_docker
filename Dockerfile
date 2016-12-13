@@ -46,7 +46,7 @@ RUN pip install --upgrade pip &&\
     pip install scipy \
     statsmodels \
     pandas \
-    maptolib \
+    matplotlib \
     joblib \
     multiprocessing && \ 
     pip install --user --upgrade cutadapt
@@ -67,8 +67,8 @@ RUN git clone https://github.com/BenLangmead/bowtie2.git &&\
 RUN git clone https://github.com/LewisLabUCSD/PinAPL-Py.git &&\
 	mkdir -p /workingdir &&\
 	mkdir -p /scratch &&\
-	chmod -R 755 /opt/PinAPLPy/Scripts
+	chmod -R 755 /opt/PinAPL-Py/Scripts
 	
-ENV PATH="/opt/PinAPLPy/Scripts:/root/.local/bin/:${PATH}" 
+ENV PATH="/opt/PinAPL-Py/Scripts:/root/.local/bin/:${PATH}" 
 	
 WORKDIR /workingdir
