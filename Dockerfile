@@ -46,10 +46,14 @@ RUN pip install --upgrade pip &&\
     pip install scipy \
     statsmodels \
     pandas \
-    matplotlib \
     joblib \
     multiprocessing && \ 
     pip install --user --upgrade cutadapt
+    
+RUN wget https://pypi.python.org/packages/8f/f4/c0c7e81f64d5f4d36e52e393af687f28882c53dcd924419d684dc9859f40/matplotlib-1.5.1.tar.gz &&\
+	tar -xzvf matplotlib-1.5.1.tar.gz &&\
+	cd maptolib-1.5.1 &&\
+	python setup.py install
 
 RUN git clone https://github.com/BenLangmead/bowtie2.git &&\
  cd bowtie2 &&\
@@ -64,11 +68,11 @@ RUN git clone https://github.com/BenLangmead/bowtie2.git &&\
  cp bowtie2-inspect-s /usr/bin &&\
  cp bowtie2-inspect-l /usr/bin
 
-RUN git clone https://github.com/Yavin4/PinAPLPy.git &&\
+RUN git clone https://github.com/LewisLabUCSD/PinAPL-Py.git &&\
 	mkdir -p /workingdir &&\
 	mkdir -p /scratch &&\
-	chmod -R 755 /opt/PinAPLPy
+	chmod -R 755 /opt/PinAPLPy/Scripts
 	
-ENV PATH="/opt/PinAPLPy:/root/.local/bin/:${PATH}" 
+ENV PATH="/opt/PinAPLPy/Scripts:/root/.local/bin/:${PATH}" 
 	
 WORKDIR /workingdir
