@@ -30,6 +30,7 @@ python-numpy \
 python-yaml \
 software-properties-common \
 screen \
+samtools \
 vim \
 wget \
 zip \
