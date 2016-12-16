@@ -52,8 +52,9 @@ RUN pip install --upgrade pip &&\
     multiprocessing && \ 
     pip install --user --upgrade cutadapt
     
-RUN git clone https://github.com/BenLangmead/bowtie2.git &&\
- cd bowtie2 &&\
+RUN wget -O bowtie2.tar.gz --no-check-certificate https://github.com/BenLangmead/bowtie2/archive/v2.2.8.tar.gz &&\
+ tar -xzvf bowtie2.tar.gz &&\
+ cd bowtie2-2.2.8 &&\
  make &&\
  cp bowtie2 /usr/bin &&\
  cp bowtie2-align-s /usr/bin &&\
