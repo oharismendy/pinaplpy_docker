@@ -49,6 +49,9 @@ RUN pip install --upgrade pip &&\
     pandas \
     matplotlib \
     joblib \
+    numpy==1.11.2 \
+    Cython \
+    pysam \
     multiprocessing && \ 
     pip install --user --upgrade cutadapt
     
