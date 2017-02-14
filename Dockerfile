@@ -52,6 +52,8 @@ RUN pip install --upgrade pip &&\
     numpy==1.11.2 \
     Cython \
     pysam \
+    xlrd==0.9.2 \
+    xlwt==0.7.5 \
     multiprocessing && \ 
     pip install --user --upgrade cutadapt
     
