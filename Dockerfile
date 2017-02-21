@@ -39,6 +39,7 @@ zlib1g \
 zlib1g-dev \
 gedit \
 gpicview \
+http://bitbucket.org/ericgazoni/openpyxl/downloads \
 r-base 
 
 RUN R -e "install.packages(c('heatmap.2','gplots'), repos = 'http://cran.rstudio.com/')" 
@@ -74,6 +75,7 @@ RUN wget -O bowtie2.tar.gz --no-check-certificate https://github.com/BenLangmead
 RUN git clone https://github.com/LewisLabUCSD/PinAPL-Py.git &&\
 	mkdir -p /workingdir &&\
 	mkdir -p /scratch &&\
+	ln -s /opt/PinAPL-Py/Scripts /workingdir/Scripts &&\
 	chmod -R 755 /opt/PinAPL-Py/Scripts
 	
 ENV PATH="/opt/PinAPL-Py/Scripts:/root/.local/bin/:${PATH}" 
