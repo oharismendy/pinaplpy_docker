@@ -39,7 +39,7 @@ zlib1g \
 zlib1g-dev \
 gedit \
 gpicview \
-http://bitbucket.org/ericgazoni/openpyxl/downloads \
+openpyxl \
 r-base 
 
 RUN R -e "install.packages(c('heatmap.2','gplots'), repos = 'http://cran.rstudio.com/')" 
