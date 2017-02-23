@@ -55,6 +55,7 @@ RUN pip install --upgrade pip &&\
     xlrd==0.9.2 \
     xlwt==0.7.5 \
     openpyxl \
+    multiqc \
     multiprocessing && \ 
     pip install --user --upgrade cutadapt
     
@@ -71,6 +72,11 @@ RUN wget -O bowtie2.tar.gz --no-check-certificate https://github.com/BenLangmead
  cp bowtie2-inspect /usr/bin &&\
  cp bowtie2-inspect-s /usr/bin &&\
  cp bowtie2-inspect-l /usr/bin
+ 
+RUN wget http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.5.zip &&\
+	unzip fastqc_v0.11.5.zip &&\
+	cp FastQC/fastqc /usr/local/bin &&\
+	chmod a+x /usr/local/bin/*
 
 RUN git clone https://github.com/LewisLabUCSD/PinAPL-Py.git &&\
 	mkdir -p /workingdir &&\
