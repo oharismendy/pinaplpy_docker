@@ -39,7 +39,8 @@ zlib1g \
 zlib1g-dev \
 gedit \
 gpicview \
-r-base 
+r-base \
+default-jre
 
 RUN R -e "install.packages(c('heatmap.2','gplots'), repos = 'http://cran.rstudio.com/')" 
 
