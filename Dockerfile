@@ -75,7 +75,8 @@ RUN wget -O bowtie2.tar.gz --no-check-certificate https://github.com/BenLangmead
  
 RUN wget http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.5.zip &&\
 	unzip fastqc_v0.11.5.zip &&\
-	cp FastQC/fastqc /usr/local/bin &&\
+	ln -s /opt/FastQC/fastqc /usr/local/bin/fastqc &&\
+	chmod a+x /opt/FastQC/fastqc &&\
 	chmod a+x /usr/local/bin/*
 
 RUN git clone https://github.com/LewisLabUCSD/PinAPL-Py.git &&\
