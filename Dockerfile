@@ -74,7 +74,7 @@ RUN wget -O bowtie2.tar.gz --no-check-certificate https://github.com/BenLangmead
  cp bowtie2-inspect-s /usr/bin &&\
  cp bowtie2-inspect-l /usr/bin
  
-RUN wget http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.5.zip &&\
+RUN wget --no-check-certificate http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.5.zip &&\
 	unzip fastqc_v0.11.5.zip &&\
 	ln -s /opt/FastQC/fastqc /usr/local/bin/fastqc &&\
 	chmod a+x /opt/FastQC/fastqc &&\
