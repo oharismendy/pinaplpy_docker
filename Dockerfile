@@ -7,7 +7,6 @@ MAINTAINER Olivier Harismendy "oharismendy@ucsd.edu"
 WORKDIR /opt
 
 ### install
-RUN apt-get install liblzma-dev
 RUN apt-get update && apt-get install -y \
 autoconf \
 build-essential \
@@ -42,6 +41,8 @@ gedit \
 gpicview \
 r-base \
 default-jre
+
+RUN apt-get install liblzma-dev
 
 RUN R -e "install.packages(c('heatmap.2','gplots'), repos = 'http://cran.rstudio.com/')" 
 
