@@ -61,7 +61,8 @@ RUN pip install --upgrade pip &&\
     multiqc==0.9 \
     multiprocessing && \ 
     pip install --user --upgrade cutadapt
-    
+
+
 RUN wget -O bowtie2.tar.gz --no-check-certificate https://github.com/BenLangmead/bowtie2/archive/v2.2.8.tar.gz &&\
  tar -xzvf bowtie2.tar.gz &&\
  cd bowtie2-2.2.8 &&\
