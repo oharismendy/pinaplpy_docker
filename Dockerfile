@@ -42,7 +42,6 @@ gpicview \
 r-base \
 default-jre
 
-
 RUN apt-get install liblzma-dev
 
 RUN R -e "install.packages(c('heatmap.2','gplots'), repos = 'http://cran.rstudio.com/')" 
