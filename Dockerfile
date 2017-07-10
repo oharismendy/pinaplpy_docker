@@ -48,17 +48,17 @@ RUN R -e "install.packages(c('heatmap.2','gplots'), repos = 'http://cran.rstudio
 
 RUN pip install --upgrade pip &&\
     pip install scipy \
-    statsmodels \
-    pandas \
-    matplotlib \
-    joblib \
+    statsmodels==0.6.1 \
+    pandas==0.19.1 \
+    matplotlib==2.0.2 \
+    joblib==0.9.4 \
     numpy==1.11.2 \
-    Cython \
-    pysam \
+    Cython==0.25.2 \
+    pysam==0.10.0 \
     xlrd==0.9.2 \
     xlwt==0.7.5 \
-    openpyxl \
-    multiqc \
+    openpyxl=1.7.0 \
+    multiqc=0.9 \
     multiprocessing && \ 
     pip install --user --upgrade cutadapt
     
