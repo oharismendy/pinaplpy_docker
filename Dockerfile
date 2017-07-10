@@ -57,8 +57,8 @@ RUN pip install --upgrade pip &&\
     pysam==0.10.0 \
     xlrd==0.9.2 \
     xlwt==0.7.5 \
-    openpyxl=1.7.0 \
-    multiqc=0.9 \
+    openpyxl==1.7.0 \
+    multiqc==0.9 \
     multiprocessing && \ 
     pip install --user --upgrade cutadapt
     
