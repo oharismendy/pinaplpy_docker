@@ -59,8 +59,10 @@ RUN pip install --upgrade pip &&\
     xlwt==0.7.5 \
     openpyxl==1.7.0 \
     multiqc==0.9 \
+    seaborn==0.9.0 \
     multiprocessing && \ 
     pip install --user --upgrade cutadapt
+    
 
 RUN wget -O bowtie2.tar.gz --no-check-certificate https://github.com/BenLangmead/bowtie2/archive/v2.2.8.tar.gz &&\
  tar -xzvf bowtie2.tar.gz &&\
